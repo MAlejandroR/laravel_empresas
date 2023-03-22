@@ -7,6 +7,34 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# Clonar el proyecto y levantarlo
+Clono el proyecto 
+```shell
+git clone https://.....
+cd laravel_empresas
+composer update
+npm install
+```
+* Verifico que tenga el fichero .env, sino lo consigo y genero la clave
+```shell
+php artisan key:gen
+```
+* Cargo las bases de datos de mi docker [docker_file](./docker-compose.yaml)
+```shell
+#al estar funcionando con dokcer, lo levanto. El fichero se aporta e 
+docker compose up -d
+php artisan migrate 
+```
+*Levanto el proyecto y verfico su funcionamieto (el & es para no perder el terminal y ejecutar el proceso en backgroud)
+```shell
+php artisan serve &
+npm run dev
+```
+* Accedo a http://localhost:8000 y verfico que todo funciona
+
+
+
+
 ## Proyecto empresas
 Creo el proyecto nuevo 
 ```shell
@@ -60,7 +88,7 @@ Abro el servidor y me conecto a la aplicación.
 ```shell
 php artisan serve &
 ```
-
+## [ Diseño de pantallas ](./documentacion/diseño_layout.md)
 
 
 
